@@ -31,7 +31,7 @@
   ;; ready listener
   (.on app "ready"
        (fn []
-         (reset! *win* (BrowserWindow. (clj->js {:width 800 :height 600})))
+         (reset! *win* (BrowserWindow. (clj->js {:width 1024 :height 768})))
 
          ;; when no optimize comment out
          (.loadURL @*win* (str "file://" (.resolve path (js* "__dirname") "../index.html")))
