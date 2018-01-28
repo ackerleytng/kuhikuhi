@@ -1,0 +1,91 @@
+* About
+
+This is a project management tool.
+
+* Concepts
+
+** Updates
+Updates are progress updates for a particular task.
+An example of an update would be:
+"[Date/timestamp] Equipment purchased and is with xyz now."
+
+Only tasks can have updates.
+ - (not sure if too restrictive) If you have to add an update to a project, rearrange/add/remove tasks to add an update appropriately
+
+** Status
+Status is a series of options with associated levels of completion
+This is configurable.
+For example
+| Status                         | Completion (out of 10) |
+|--------------------------------+------------------------|
+| Pending manpower availability  |                      0 |
+| Pending equipment purchase     |                      1 |
+| Pending development completion |                      5 |
+| Pending demo                   |                      7 |
+| Pending user trial             |                      8 |
+| Pending update to boss         |                      9 |
+| Complete                       |                     10 |
+
+* Views
+
+** Task view
+ - Shows a table 
+| Field       | Description                            |
+|-------------+----------------------------------------|
+| Project     | Project name                           |
+| Task        | Task name                              |
+| Task Order  | Order of task in project               |
+| Description | Task description                       |
+| Duration    | Estimated duration for this task       |
+| Assignee    | The person going to work on this task  |
+| Status      | Status                                 |
+| Updates     | Link to show more updates to this task |
+
+** Project view
+ - Shows a table
+| Field                   | Description                                         |
+|-------------------------+-----------------------------------------------------|
+| Project                 | Project name                                        |
+| Description             | Project Description                                 |
+| Track                   | Track name                                          |
+| Track Priority          | Priority within track                               |
+| Requestor Department(s) | Requestor's deparment                               |
+| Requestor(s)            | Requestor name                                      |
+| Updates                 | Combined updates of tasks, most recent update first |
+| Tasks                   | link to task view for this project                  |
+
+** Manpower view
+ - Shows tasks assigned to assignees per track
+ - Default: Assignees sorted by name, tasks sorted by work order. Completed tasks will be at the bottom
+| Field       | Description                               |
+|-------------+-------------------------------------------|
+| Work order  | Order in the work queue for this assignee |
+| Assignee    | Name of assignee                          |
+| Task        | Name of task                              |
+| Description | Task description                          |
+| Status      | Status of task                            |
+
+** Project Management View
+ - This is where we would edit projects
+ - Fields
+   - Project Name
+     - Task list
+       - Task name
+       - Description
+       - Task order
+       - Duration
+       - Assignee
+       - Status
+     - Updates
+       - Date defaults to today, but editable
+       - Freeform update
+
+** Add Project View
+ - This is where new projects are added
+ - Fields
+   - Project Name
+   - Project Description
+   - Track
+   - Track Priority
+   - Requestor Department(s)
+   - Requestor(s)
